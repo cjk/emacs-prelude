@@ -11,10 +11,11 @@
 
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
-(global-set-key (kbd "C-S-f") 'indent-buffer)
-(global-set-key (kbd "C-S-b") 'switch-to-previous-buffer)
+(global-set-key (kbd "C-S-f") 'prelude-indent-buffer)
+(global-set-key (kbd "C-:") 'switch-to-previous-buffer)
 
-(require 'rspec-mode)
+
+
 ;; Add my personal figs
 (set-frame-parameter (selected-frame) 'alpha '(94 76))
 (menu-bar-mode 1)
@@ -27,4 +28,14 @@
   (set-frame-position (selected-frame) 0 0)
   (set-frame-size (selected-frame) 1000 1000))
 
-(setq ispell-dictionary "english")
+(setq ispell-dictionary "English")
+
+
+
+(require 'rspec-mode)
+
+;; rbenv
+(setq exec-path (cons "~/.rbenv/bin" exec-path))
+(setenv "PATH" (concat "~/.rbenv/bin:" (getenv "PATH")))
+(setq exec-path (cons "~/.rbenv/shims" exec-path))
+(setenv "PATH" (concat "~/.rbenv/shims:" (getenv "PATH")))
