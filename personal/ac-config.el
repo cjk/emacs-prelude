@@ -1,11 +1,11 @@
-(add-to-list 'load-path (concat dotfiles-dir "vendor/auto-complete"))
+;(add-to-list 'load-path (concat dotfiles-dir "vendor/auto-complete"))
 (require 'auto-complete)
 (require 'auto-complete-config)
 
 (ac-config-default)
 (ac-flyspell-workaround)
 
-(add-to-list 'ac-dictionary-directories (concat dotfiles-dir "vendor/auto-complete/dict"))
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/dict")
 
 ;(setq ac-comphist-file (concat dotfiles-tmp-dir "ac-comphist.dat"))
 
@@ -35,7 +35,7 @@
 
 ;;Key triggers
 (ac-set-trigger-key "TAB")
-(define-key ac-completing-map (kbd "C-M-n") 'ac-next)
-(define-key ac-completing-map (kbd "C-M-p") 'ac-previous)
+;(define-key ac-completing-map (kbd "C-N") 'ac-next)
+;(define-key ac-completing-map (kbd "C-P") 'ac-previous)
 (define-key ac-completing-map "\t" 'ac-complete)
 (define-key ac-completing-map "\r" 'ac-complete)

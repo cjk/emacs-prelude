@@ -15,7 +15,6 @@
 (global-set-key (kbd "C-:") 'switch-to-previous-buffer)
 
 
-
 ;; Add my personal figs
 (set-frame-parameter (selected-frame) 'alpha '(94 76))
 (menu-bar-mode 1)
@@ -30,8 +29,6 @@
 
 (setq ispell-dictionary "English")
 
-
-
 (require 'rspec-mode)
 
 ;; rbenv
@@ -39,3 +36,5 @@
 (setenv "PATH" (concat "~/.rbenv/bin:" (getenv "PATH")))
 (setq exec-path (cons "~/.rbenv/shims" exec-path))
 (setenv "PATH" (concat "~/.rbenv/shims:" (getenv "PATH")))
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
