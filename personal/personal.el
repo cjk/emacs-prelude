@@ -20,7 +20,7 @@
 (menu-bar-mode 1)
 (global-linum-mode 1)
 (setq default-tab-width 2)
-(add-hook 'before-save-hook 'whitespace-cleanup nil t)
+
 
 (defun maximize-frame ()
   (interactive)
@@ -37,4 +37,6 @@
 (setq exec-path (cons "~/.rbenv/shims" exec-path))
 (setenv "PATH" (concat "~/.rbenv/shims:" (getenv "PATH")))
 
+(add-hook 'before-save-hook 'whitespace-cleanup nil t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'prog-mode-hook 'prelude-turn-off-whitespace t)
