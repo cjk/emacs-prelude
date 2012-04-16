@@ -98,6 +98,7 @@
 (define-key rspec-mode-verifible-keymap (kbd "v") 'rspec-verify)
 (define-key rspec-mode-verifible-keymap (kbd "a") 'rspec-verify-all)
 (define-key rspec-mode-verifible-keymap (kbd "t") 'rspec-toggle-spec-and-target)
+(define-key rspec-mode-verifible-keymap (kbd "s") 'rspec-verify-single)
 
 (define-prefix-command 'rspec-mode-keymap)
 (define-key rspec-mode-keymap (kbd "v") 'rspec-verify)
