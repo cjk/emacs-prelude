@@ -7,10 +7,11 @@ eshell
 elpa
 el-get
 semanticdb
-custom.el
 url
 ede-projects.el
 ac-comphist.dat
 session.*
 tramp
 swank
+.DS_Store
+
