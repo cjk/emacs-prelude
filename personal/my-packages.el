@@ -1,9 +1,8 @@
 ;;package-manager
 (require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
-(add-to-list 'package-archives
-             '("tromey" . "http://tromey.com/elpa/") t)
+; Probably not needed with new prelude
+;(add-to-list 'package-archives             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+;(add-to-list 'package-archives             '("tromey" . "http://tromey.com/elpa/") t)
 (package-initialize)
 
 (when (not package-archive-contents)
@@ -11,13 +10,13 @@
 
 (setq  my-packages '(ac-slime
                      rspec-mode
-                     auto-complete))
+                     auto-complete
+                     smex))
 
 (defun install-my-packages ()
   (dolist (p my-packages)
     (when (not (package-installed-p p))
       (package-install p))))
-
 
 
 (install-my-packages)
