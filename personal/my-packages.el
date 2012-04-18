@@ -11,7 +11,8 @@
 (setq  my-packages '(ac-slime
                      rspec-mode
                      auto-complete
-                     smex))
+                     smex
+                     twittering-mode))
 
 (defun install-my-packages ()
   (dolist (p my-packages)
