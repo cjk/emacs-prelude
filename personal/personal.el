@@ -44,6 +44,7 @@
 (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec" . ruby-mode))
 
+(setq scss-compile-at-save nil)
 
 ; Captain hooks
 (add-hook 'before-save-hook 'whitespace-cleanup nil t)
