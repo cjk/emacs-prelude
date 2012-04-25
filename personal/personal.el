@@ -17,7 +17,7 @@
   (set-frame-size (selected-frame) 1000 1000))
 
 ;Look and feel
-(set-frame-parameter (selected-frame) 'alpha '(94 76))
+(set-frame-parameter (selected-frame) 'alpha '(88 76))
 (add-to-list 'default-frame-alist '(width . 268))
 (add-to-list 'default-frame-alist '(height . 55))
 (menu-bar-mode 1)
