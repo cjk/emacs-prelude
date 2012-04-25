@@ -61,6 +61,19 @@
 (smex-auto-update 30)
 (setq smex-show-unbound-commands t)
 
+;Tweet!
+(require 'twittering-mode)
+(add-hook 'twittering-new-tweets-hook (lambda ()
+                                        (let ((n twittering-new-tweets-count))
+                                          (start-process "twittering-notify" nil "notify-send"
+                                                         "-i" "/usr/share/emacs/24.1.50/etc/images/icons/hicolor/scalable/apps/emacs.svg"
+                                                         "New tweets"
+                                                         (format "You have %d new tweet%s"
+                                                                 n (if (> n 1) "s" ""))))))
+(setq twittering-use-master-password t)
+(setq twittering-icon-mode 1)
+(setq twittering-timer-interval 90)
+(setq twittering-use-profile-image-api t)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
