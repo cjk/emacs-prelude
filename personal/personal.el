@@ -74,7 +74,6 @@
 (setq twittering-use-master-password t)
 (setq twittering-icon-mode 1)
 (setq twittering-timer-interval 90)
-(setq twittering-use-profile-image-api t)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
