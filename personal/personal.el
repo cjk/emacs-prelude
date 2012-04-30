@@ -1,4 +1,4 @@
-;Apple, think different
+;;Apple, think different
 (setq
  ns-command-modifier   'meta            ; Apple/Command key is Meta
  ns-alternate-modifier 'super           ; Option is the Mac Option key
@@ -6,7 +6,7 @@
  mouse-wheel-progressive-speed nil
  )
 
-;Some functions
+;;Some functions
 (defun switch-to-previous-buffer ()
   (interactive)
   (switch-to-buffer (other-buffer)))
@@ -16,7 +16,7 @@
   (set-frame-position (selected-frame) 0 0)
   (set-frame-size (selected-frame) 1000 1000))
 
-;Look and feel
+;;Look and feel
 (set-frame-parameter (selected-frame) 'alpha '(88 76))
 (add-to-list 'default-frame-alist '(width . 268))
 (add-to-list 'default-frame-alist '(height . 55))
@@ -25,7 +25,7 @@
 (blink-cursor-mode t)
 (global-hl-line-mode -1)
 
-;More sets
+;;More sets
 (setq ispell-dictionary "en")
 (setq default-tab-width 2)
 (setq js-indent-level 2) ;nerd rage I must set this separate from 'default-tab-width
@@ -47,7 +47,13 @@
 
 (setq scss-compile-at-save nil)
 
-; Captain hooks
+;; Sounds cool, doesn't work
+;; (require 'ruby-block)
+;; (ruby-block-mode t)
+;; (setq ruby-block-highlight-toggle 'overlay)
+;; (setq ruby-block-highlight-toggle t)
+
+;; Captain hooks
 (add-hook 'before-save-hook 'whitespace-cleanup nil t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'prog-mode-hook 'prelude-turn-off-whitespace t)
@@ -57,12 +63,12 @@
 (add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode t)))
 (add-hook 'scheme-mode-hook           (lambda () (paredit-mode t)))
 
-;Smexy
+;;Smexy
 (smex-initialize)
 (smex-auto-update 30)
 (setq smex-show-unbound-commands t)
 
-;Tweet!
+;;Tweet!
 (require 'twittering-mode)
 (add-hook 'twittering-new-tweets-hook (lambda ()
                                         (let ((n twittering-new-tweets-count))
@@ -79,3 +85,4 @@
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-S-f") 'prelude-indent-buffer)
 (global-set-key (kbd "C-:") 'switch-to-previous-buffer)
+(setq yas/trigger-key "C-c .")
