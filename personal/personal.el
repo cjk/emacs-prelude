@@ -18,8 +18,8 @@
 
 ;;Look and feel
 (set-frame-parameter (selected-frame) 'alpha '(88 76))
-(add-to-list 'default-frame-alist '(width . 268))
-(add-to-list 'default-frame-alist '(height . 55))
+(add-to-list 'default-frame-alist '(width . 120))
+(add-to-list 'default-frame-alist '(height . 25))
 (menu-bar-mode 1)
 (global-linum-mode 1)
 (blink-cursor-mode t)
