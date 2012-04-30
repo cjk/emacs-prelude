@@ -46,6 +46,7 @@
 (add-hook 'ruby-mode-hook (lambda () (setq show-trailing-whitespace nil)))
 
 (setq scss-compile-at-save nil)
+;;(add-hook 'scss-mode-hook (lambda () (auto-complete-mode 1)))
 
 ;; Sounds cool, doesn't work
 ;; (require 'ruby-block)
